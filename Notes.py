@@ -8,6 +8,13 @@ class Notes:
         if notes != None:
             self._Notes.append(Note(self._Next_id, notes))
             self._Next_id += 1
+
+    def Get_by_id(self, id):
+        result = None
+        for item in self._Notes:
+            if item.id == id:
+                result = item
+        return result 
         
     #def Get_sorted(self):
         #return sorted([item for item in self._Notes], key = lambda row:(row.surname, row.name, row.patronymic))

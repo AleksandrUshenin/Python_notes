@@ -8,10 +8,15 @@ class UserInterface:
             \n 3 - Вывести заметку с id\
             \n 4 - Удалить\n 5 - Редоктировать\n 6 - Загрузить\n 7 - Сохранить\n 0 - Выход")
 
-    def Print_Notes(self, list_notes):
+    def Print_List_Notes(self, list_notes):
         print('\n\t\t Список заметок: \n')
         print('===================================================================================')
         for note in list_notes:
             print('\tid: {}'.format(note.id))
         
+        Read_command.Read_line('')
+
+    def Print_Note(self, note):
+        print('\n\tЗаметка с id: {}'.format(note.id))
+        print('\n{}'.format(note.data_note))
         Read_command.Read_line('')

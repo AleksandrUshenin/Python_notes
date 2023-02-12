@@ -19,6 +19,8 @@ class Program:
         elif id_command == '1':
             self._Control.Add()
         elif id_command == '2':
-            self._Control.Print_Notes()
+            self._Control.Print_List_Notes()
+        elif id_command == '3':
+            self._Control.Print_Note()
             
         return True

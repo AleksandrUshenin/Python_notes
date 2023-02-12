@@ -13,6 +13,15 @@ class Controller:
         self._Message = Read_command.Read_line('Введите заметку: ')
         self._Notes.Add_Note(self._Message)
 
-    def Print_Notes(self):
-        res = self._Notes.Get_unsorted()
-        self._View.Print_Notes(res)
+    def Print_List_Notes(self):
+        result = self._Notes.Get_unsorted()
+        self._View.Print_List_Notes(result)
+    
+    def Print_Note(self):
+        id = None
+        try:
+            id = int(Read_command.Read_line('Введите id: '))
+        except:
+            return
+        result = self._Notes.Get_by_id(id)
+        self._View.Print_Note(result)
