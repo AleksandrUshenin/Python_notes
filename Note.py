@@ -12,7 +12,8 @@ class Note:
         self.body = note_body
         self.date = time
 
-    def Add(self, id,  note_body):
-        if note_body != None:  
+    def Edit(self, header, note_body, date):
+        if note_body != None:
+            self.header = header  
             self.body = note_body
-            self.id = id
+            self.date = date

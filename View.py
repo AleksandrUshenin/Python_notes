@@ -18,5 +18,6 @@ class UserInterface:
 
     def Print_Note(self, note):
         print('\n\tЗаметка с id: {}'.format(note.id))
-        print('\n{}'.format(note.data_note))
+        print('\n header: {}'.format(note.header))
+        print('\n body: \n{}'.format(note.body))
         Read_command.Read_line('')

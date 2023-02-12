@@ -34,3 +34,13 @@ class Controller:
         except:
             return
         self._Notes.Delete(id)
+
+    def Edit_Node(self):
+        id = None
+        try:
+            id = int(Read_command.Read_line('Введите id: '))
+        except:
+            return
+        header = Read_command.Read_line('Введите заголовок: ')
+        self._Message = Read_command.Read_line('Введите Заметку: ')
+        self._Notes.Edit(id, header, self._Message)

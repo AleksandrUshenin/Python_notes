@@ -23,6 +23,12 @@ class Notes:
         for item in self._Notes:
             if item.id == id:
                 self._Notes.remove(item)
+
+    def Edit(self, id, header, node):
+        time = datetime.now()
+        item : Note = None
+        item = self.Get_by_id(id)
+        item.Edit(header, node, time)
         
         
     #def Get_sorted(self):

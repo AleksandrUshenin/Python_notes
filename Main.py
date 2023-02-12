@@ -24,5 +24,7 @@ class Program:
             self._Control.Print_Note()
         elif id_command == '4':
             self._Control.Delete_Node()
+        elif id_command == '5':
+            self._Control.Edit_Node()   
             
         return True
