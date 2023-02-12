@@ -7,6 +7,7 @@ class Program:
     _Control = Controller(_View)
 
     def Run(self):
+        self.Do_Commands('6')
         Do = True
 
         while Do:
@@ -25,7 +26,9 @@ class Program:
         elif id_command == '4':
             self._Control.Delete_Node()
         elif id_command == '5':
-            self._Control.Edit_Node()   
+            self._Control.Edit_Node() 
+        elif id_command == '6':
+            self._Control.Load()
         elif id_command == '7':
             self._Control.Save()
             

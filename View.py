@@ -17,6 +17,8 @@ class UserInterface:
         Read_command.Read_line('')
 
     def Print_Note(self, note):
+        if note == None:
+            return
         print('\n\tЗаметка с id: {}'.format(note.id))
         print('\n header: {}'.format(note.header))
         print('\n body: \n{}'.format(note.body))

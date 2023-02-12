@@ -49,3 +49,7 @@ class Controller:
 
     def Save(self):
         self._JsonHandler.Export(self._Notes.Get_unsorted())
+    
+    def Load(self):
+        res = self._JsonHandler.Import()
+        self._Notes.Imort(res)

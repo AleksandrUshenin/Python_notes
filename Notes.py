@@ -25,11 +25,22 @@ class Notes:
                 self._Notes.remove(item)
 
     def Edit(self, id, header, node):
-        time = datetime.now()
-        item : Note = None
-        item = self.Get_by_id(id)
-        item.Edit(header, node, time)
-        
+        if self.Exist(id):
+            time = datetime.now()
+            item : Note = None
+            item = self.Get_by_id(id)
+            item.Edit(header, node, time)
+
+    def Exist(self, id):
+        if self.Get_by_id(id) != None:
+            return True
+        return False
+
+    def Imort(self, list_node):
+        self._Notes = list_node
+        #for item in list_node:
+        #    self._Notes.append(Note(item.id, item.header, item.notes, datetime(item.time)))
+    
         
     #def Get_sorted(self):
         #return sorted([item for item in self._Notes], key = lambda row:(row.surname, row.name, row.patronymic))

@@ -17,3 +17,4 @@ class Note:
             self.header = header  
             self.body = note_body
             self.date = date
+#def Add_str()
