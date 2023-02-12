@@ -1,12 +1,14 @@
 from Note import Note
+from datetime import datetime
 
 class Notes:
     _Next_id = 0
     _Notes = []
 
-    def Add_Note(self, notes):
+    def Add_Note(self, header, notes):
+        time = datetime.now()
         if notes != None:
-            self._Notes.append(Note(self._Next_id, notes))
+            self._Notes.append(Note(self._Next_id, header, notes, time))
             self._Next_id += 1
 
     def Get_by_id(self, id):

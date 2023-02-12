@@ -10,8 +10,9 @@ class Controller:
         self._View = view
 
     def Add(self):
+        header = Read_command.Read_line('Введите заголовок: ')
         self._Message = Read_command.Read_line('Введите заметку: ')
-        self._Notes.Add_Note(self._Message)
+        self._Notes.Add_Note(header, self._Message)
 
     def Print_List_Notes(self):
         result = self._Notes.Get_unsorted()
