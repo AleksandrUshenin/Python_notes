@@ -22,5 +22,7 @@ class Program:
             self._Control.Print_List_Notes()
         elif id_command == '3':
             self._Control.Print_Note()
+        elif id_command == '4':
+            self._Control.Delete_Node()
             
         return True

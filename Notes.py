@@ -15,6 +15,13 @@ class Notes:
             if item.id == id:
                 result = item
         return result 
+
+    def Delete(self, id):
+        flag = False
+        for item in self._Notes:
+            if item.id == id:
+                self._Notes.remove(item)
+        
         
     #def Get_sorted(self):
         #return sorted([item for item in self._Notes], key = lambda row:(row.surname, row.name, row.patronymic))

@@ -25,3 +25,11 @@ class Controller:
             return
         result = self._Notes.Get_by_id(id)
         self._View.Print_Note(result)
+    
+    def Delete_Node(self):
+        id = None
+        try:
+            id = int(Read_command.Read_line('Введите id: '))
+        except:
+            return
+        self._Notes.Delete(id)
