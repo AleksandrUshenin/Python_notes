@@ -26,5 +26,7 @@ class Program:
             self._Control.Delete_Node()
         elif id_command == '5':
             self._Control.Edit_Node()   
+        elif id_command == '7':
+            self._Control.Save()
             
         return True

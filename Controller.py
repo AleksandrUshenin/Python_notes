@@ -1,10 +1,12 @@
 import Read_command
 from Notes import Notes
+from JsonHandler import JsonHandler
 
 class Controller:
     _View = None
     _Message = None
     _Notes = Notes()
+    _JsonHandler = JsonHandler()
 
     def __init__(self, view):
         self._View = view
@@ -44,3 +46,6 @@ class Controller:
         header = Read_command.Read_line('Введите заголовок: ')
         self._Message = Read_command.Read_line('Введите Заметку: ')
         self._Notes.Edit(id, header, self._Message)
+
+    def Save(self):
+        self._JsonHandler.Export(self._Notes.Get_unsorted())
