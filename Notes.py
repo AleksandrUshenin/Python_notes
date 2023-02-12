@@ -6,7 +6,7 @@ class Notes:
     _Notes = []
 
     def Add_Note(self, header, notes):
-        time = datetime.now()
+        time = datetime.now().strftime("%m-%d-%Y, %H:%M:%S")
         if notes != None:
             self._Notes.append(Note(self._Next_id, header, notes, time))
             self._Next_id += 1

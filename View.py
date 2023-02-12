@@ -12,7 +12,7 @@ class UserInterface:
         print('\n\t\t Список заметок: \n')
         print('===================================================================================')
         for note in list_notes:
-            print('\tid: {} header: {} date time: {}'.format(note.id, note.header, note.date))
+            print('\tid: {}   header: {}   date time: {}'.format(note.id, note.header, note.date))
         
         Read_command.Read_line('')
 
